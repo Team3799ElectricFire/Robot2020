@@ -7,6 +7,9 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
@@ -19,6 +22,28 @@ public class OI {
   // number it is.
   // Joystick stick = new Joystick(port);
   // Button button = new JoystickButton(stick, buttonNumber);
+
+  Joystick stick = new Joystick(0);
+  //Controller with Red Tape on the USB is named, "stick"
+  JoystickButton AButton = new JoystickButton(stick, 0);
+  JoystickButton BButton = new JoystickButton (stick, 1);
+  JoystickButton XButton = new JoystickButton (stick, 2);
+  JoystickButton YButton = new JoystickButton (stick, 3);
+  JoystickButton LeftBumper = new JoystickButton (stick, 4);
+  JoystickButton RightBumper = new JoystickButton (stick, 5);
+  JoystickButton BackButton = new JoystickButton (stick, 6);
+  JoystickButton StartButton = new JoystickButton (stick, 7);
+  JoystickButton LJStickButton = new JoystickButton (stick, 8);
+  JoystickButton RJStickButton = new JoystickButton (stick, 9);
+// These are the buttons on the controller and their respective values on the Driver's Station
+
+  int LeftXAxis = 0;
+  int LeftYAxis = 1;
+  int LeftTrigger = 2;
+  int RightTrigger = 3;
+  int RightXAxis = 4;
+  int RightYAxis = 5;
+//These are the values of each joystick when moved along its respective axis as well as the triggers LT and RT
 
   // There are a few additional built in buttons you can use. Additionally,
   // by subclassing Button you can create custom triggers and bind those to
@@ -40,3 +65,4 @@ public class OI {
   // until it is finished as determined by it's isFinished method.
   // button.whenReleased(new ExampleCommand());
 }
+
