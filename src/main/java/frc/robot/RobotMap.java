@@ -23,4 +23,21 @@ public class RobotMap {
   // number and the module. For example you with a rangefinder:
   // public static int rangefinderPort = 1;
   // public static int rangefinderModule = 1;
+
+
+  //Gives each motor a CANbus address
+  public static int ConveyorMotor1 = 1;
+  public static int ConveyorMotor2 = 2;
+  public static int ConveyorMotor3 = 3;
+  public static int ConveyorMotor4 = 4;
+  public static int ConveyorMotor5 = 5;
+  
+  public static int PnuematicModule1 = 6;
+  public static int WristModule2 = 1;
+
+  public static int BallSensor1 = 0;
+  public static int BallSensor2 = 1;
+  public static int BallSensor3 = 2;
+  public static int BallSensor4 = 3;
+  public static int BallSensor5 = 4;
 }
