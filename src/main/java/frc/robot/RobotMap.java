@@ -40,4 +40,13 @@ public class RobotMap {
   public static int BallSensor3 = 2;
   public static int BallSensor4 = 3;
   public static int BallSensor5 = 4;
+
+  public static int ClimbMotor1 = 7;
+  public static int ClimbMotor2 = 8;
+  public static int Scoots1 = 9;
+  public static int Scoots2 = 10;
+
+  public static int Yeet1 = 11;
+  public static int Yeet2 = 12;
+  
 }
