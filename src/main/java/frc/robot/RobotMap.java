@@ -27,8 +27,8 @@ public class RobotMap {
 
   //Gives each motor a CANbus address
   public static int ConveyorMotor1 = 1;
-  public static int ConveyorMotor2 = 2;
-  public static int ConveyorMotor3 = 3;
+  public static int ConveyorMotor2 = 16;
+  public static int ConveyorMotor3 = 15;
   public static int ConveyorMotor4 = 4;
   public static int ConveyorMotor5 = 5;
   
@@ -48,5 +48,15 @@ public class RobotMap {
 
   public static int Yeet1 = 11;
   public static int Yeet2 = 12;
-  
+
+
+  //According to Emmalie, these are where each drive train motor lives
+  public static int DriveMotor1 = 2;
+  //right rear
+  public static int DriveMotor2 = 3;
+  //right front
+  public static int DriveMotor3 = 14;
+  // left rear
+  public static int DriveMotor4 = 13;
+  //left front
 }
