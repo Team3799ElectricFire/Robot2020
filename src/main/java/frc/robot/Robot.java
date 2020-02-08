@@ -12,6 +12,10 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.subsystems.Climber;
+import frc.robot.subsystems.Conveyor;
+import frc.robot.subsystems.DriveTrain;
+import frc.robot.subsystems.Yeeter;
 
 
 /**
@@ -22,6 +26,11 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * project.
  */
 public class Robot extends TimedRobot {
+  public static Yeeter m_yeeter = new Yeeter();
+  public static Conveyor m_conveyor = new Conveyor();
+  public static DriveTrain m_drivetrain = new DriveTrain();
+  public static Climber m_climber = new Climber();
+
   public static OI m_oi;
 
   Command m_autonomousCommand;

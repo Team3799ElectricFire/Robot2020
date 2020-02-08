@@ -23,7 +23,7 @@ public class OI {
   // Joystick stick = new Joystick(port);
   // Button button = new JoystickButton(stick, buttonNumber);
 
-  Joystick stick = new Joystick(0);
+  public Joystick stick = new Joystick(0);
   //Controller with Red Tape on the USB is named, "stick"
   JoystickButton AButton = new JoystickButton(stick, 0);
   JoystickButton BButton = new JoystickButton (stick, 1);
@@ -37,12 +37,12 @@ public class OI {
   JoystickButton RJStickButton = new JoystickButton (stick, 9);
 // These are the buttons on the controller and their respective values on the Driver's Station
 
-  int LeftXAxis = 0;
-  int LeftYAxis = 1;
-  int LeftTrigger = 2;
-  int RightTrigger = 3;
-  int RightXAxis = 4;
-  int RightYAxis = 5;
+  public final int LeftXAxis = 0;
+  public final int LeftYAxis = 1;
+  public final int LeftTrigger = 2;
+  public final int RightTrigger = 3;
+  public final int RightXAxis = 4;
+  public final int RightYAxis = 5;
 //These are the values of each joystick when moved along its respective axis as well as the triggers LT and RT
 
   // There are a few additional built in buttons you can use. Additionally,
@@ -64,5 +64,9 @@ public class OI {
   // Start the command when the button is released and let it run the command
   // until it is finished as determined by it's isFinished method.
   // button.whenReleased(new ExampleCommand());
+
+
+  //// TODO button.whileHeld(new Shooty());
+
 }
 
