@@ -43,6 +43,31 @@ public class OI {
   public final int RightTrigger = 3;
   public final int RightXAxis = 4;
   public final int RightYAxis = 5;
+
+  public double getLeftXAxis(){
+    return stick.getRawAxis(0);
+  }
+
+  public double getLeftYAxis(){
+    return stick.getRawAxis(1);
+  }
+
+  public double getLeftTrigger(){
+    return stick.getRawAxis(2);
+  }
+
+  public double getRightTrigger(){
+    return stick.getRawAxis(3);
+  }
+
+  public double getRightXAxis(){
+    return stick.getRawAxis(4);
+  }
+
+  public double getRightYAxis(){
+    return stick.getRawAxis(5);
+  }
+
 //These are the values of each joystick when moved along its respective axis as well as the triggers LT and RT
 
   // There are a few additional built in buttons you can use. Additionally,
