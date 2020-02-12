@@ -15,6 +15,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.subsystems.Climber;
 import frc.robot.subsystems.Conveyor;
 import frc.robot.subsystems.DriveTrain;
+import frc.robot.subsystems.WheelOfFortune;
 import frc.robot.subsystems.Yeeter;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
@@ -33,6 +34,7 @@ public class Robot extends TimedRobot {
   public static Conveyor m_conveyor = new Conveyor();
   public static DriveTrain m_drivetrain = new DriveTrain();
   public static Climber m_climber = new Climber();
+  public static WheelOfFortune m_wheeloffortune = new WheelOfFortune();
 
   public static OI m_oi;
 
