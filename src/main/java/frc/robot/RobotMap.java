@@ -33,6 +33,7 @@ public class RobotMap {
   public static int ConveyorMotor5 = 5;
   
   public static int PnuematicModule1 = 6;
+  public static int PneumaticModule2 = 20;
 
   public static int ClimbMotor1 = 7;
   public static int ClimbMotor2 = 8;
@@ -62,6 +63,7 @@ public class RobotMap {
   public static int BallSensor4 = 3;
   public static int BallSensor5 = 4;
 
-  
+  public static int HedgehogForward = 1;
+  public static int HedgehogBackward = 2;
 
 }

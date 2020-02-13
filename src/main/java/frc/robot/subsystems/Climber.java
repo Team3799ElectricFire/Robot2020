@@ -10,8 +10,10 @@ package frc.robot.subsystems;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
+import frc.robot.commands.ClimberScootz;
 
 /**
  * Add your docs here.
@@ -25,6 +27,8 @@ public class Climber extends Subsystem {
   TalonSRX Scoots1 = new TalonSRX(RobotMap.Scoots1);
   TalonSRX Scoots2 = new TalonSRX(RobotMap.Scoots2);
 
+  Solenoid PneumaticModule2 = new Solenoid(RobotMap.PneumaticModule2);
+ 
   public Climber() {
     super();
 
@@ -42,6 +46,7 @@ public class Climber extends Subsystem {
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
+    setDefaultCommand(new ClimberScootz());
   }
 
   public void VertClimber(double ClimbSpeed) {

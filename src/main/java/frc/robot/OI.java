@@ -9,6 +9,12 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj.buttons.POVButton;
+import frc.robot.commands.LiftArmUp;
+import frc.robot.commands.LiftRobotUp;
+import frc.robot.commands.Shooty;
+import frc.robot.commands.SpinWheelOfWOW;
+import frc.robot.subsystems.Climber;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -44,6 +50,12 @@ public class OI {
   public final int RightXAxis = 4;
   public final int RightYAxis = 5;
 
+  /* This is our DPad directions. We are only using directly up and down, followed:
+  POVButton Name = new POVButton(joystick, angle); */
+
+
+
+//Driving function of the sticks of stick
   public double getLeftXAxis(){
     return stick.getRawAxis(0);
   }
@@ -66,6 +78,28 @@ public class OI {
 
   public double getRightYAxis(){
     return stick.getRawAxis(5);
+  }
+
+
+
+
+  // Second controller is named "baby"
+  public Joystick baby = new Joystick(1);
+  POVButton UpDPad = new POVButton(baby, 0);
+  POVButton DownDPad = new POVButton(baby, 180);
+  JoystickButton ABaby = new JoystickButton(baby, 0);
+
+
+  public OI() {
+  StartButton.whileHeld(new SpinWheelOfWOW());
+   
+
+  //This is the second controller buttons for Baby Driver
+  UpDPad.whileHeld(new LiftArmUp());
+  DownDPad.whileHeld(new LiftRobotUp());
+  ABaby.whileHeld(new Shooty());
+
+
   }
 
 //These are the values of each joystick when moved along its respective axis as well as the triggers LT and RT
@@ -92,6 +126,10 @@ public class OI {
 
 
   //// TODO button.whileHeld(new Shooty());
+
+
+
+  
 
 }
 

@@ -37,6 +37,7 @@ public class Robot extends TimedRobot {
   public static WheelOfFortune m_wheeloffortune = new WheelOfFortune();
 
   public static OI m_oi;
+public static Object s_gearshift;
 
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
