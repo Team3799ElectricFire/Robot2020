@@ -12,9 +12,11 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.commands.GearShiftActivate;
 import frc.robot.subsystems.Climber;
 import frc.robot.subsystems.Conveyor;
 import frc.robot.subsystems.DriveTrain;
+import frc.robot.subsystems.Hedgehog;
 import frc.robot.subsystems.WheelOfFortune;
 import frc.robot.subsystems.Yeeter;
 import edu.wpi.first.networktables.NetworkTable;
@@ -35,9 +37,10 @@ public class Robot extends TimedRobot {
   public static DriveTrain m_drivetrain = new DriveTrain();
   public static Climber m_climber = new Climber();
   public static WheelOfFortune m_wheeloffortune = new WheelOfFortune();
+ 
 
   public static OI m_oi;
-public static Object s_gearshift;
+  public static Hedgehog s_gearshift = new Hedgehog();
 
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();

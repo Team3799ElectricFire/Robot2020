@@ -64,6 +64,22 @@ public class DriveTrain extends Subsystem {
    } */
   }
 
+  public double PositionRight() {
+    return rightFrontMotor.getSelectedSensorPosition(0) * 5.68/ 2048;
+  }
+
+  public double PositionLeft() {
+    return leftFrontMotor.getSelectedSensorPosition(0) * 5.68 / 2048;
+  }
+
+  public double VelocityRight() {
+    return rightRearMotor.getSelectedSensorVelocity(0) * 5.68 / 2048;
+  }
+
+  public double VelocityLeft() {
+    return leftRearMotor.getSelectedSensorVelocity(0) * 5.68 / 2048;
+  }
+
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
