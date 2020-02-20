@@ -10,10 +10,13 @@ package frc.robot.subsystems;
 import com.ctre.phoenix.motorcontrol.InvertType;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.ControlMode;
+
+import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
+
 
 
  /*I put gyro and field centric stuff 
@@ -57,12 +60,15 @@ public class DriveTrain extends Subsystem {
     leftRearMotor.follow(leftFrontMotor);
     leftRearMotor.setInverted(InvertType.FollowMaster);
 
+  }
+    
+
    /*try {
       gyro = new AHRS(SPI.Port.kMXP); 
    } catch (RuntimeException ex ) {
        System.out.println("Error instantiating navX-MXP:  " + ex.getMessage());
-   } */
-  }
+   } 
+  } */
 
   public double PositionRight() {
     return rightFrontMotor.getSelectedSensorPosition(0) * 5.68/ 2048;

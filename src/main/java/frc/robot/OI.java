@@ -10,6 +10,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.buttons.POVButton;
+import frc.robot.commands.GearShiftActivate;
 import frc.robot.commands.LiftArmUp;
 import frc.robot.commands.LiftRobotUp;
 import frc.robot.commands.Shooty;
@@ -92,7 +93,7 @@ public class OI {
 
   public OI() {
   StartButton.whileHeld(new SpinWheelOfWOW());
-   
+  RJStickButton.whenPressed(new GearShiftActivate());
 
   //This is the second controller buttons for Baby Driver
   UpDPad.whileHeld(new LiftArmUp());
