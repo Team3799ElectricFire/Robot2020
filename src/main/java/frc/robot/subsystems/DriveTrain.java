@@ -47,7 +47,7 @@ public class DriveTrain extends Subsystem {
   //CANBus 14
 
  
-  //private AHRS gyro;
+  private AHRS gyro; //TODO fight that battle tomorrow
 
   //constructor makes the rear motors follow the front
   public DriveTrain(){
@@ -60,15 +60,16 @@ public class DriveTrain extends Subsystem {
     leftRearMotor.follow(leftFrontMotor);
     leftRearMotor.setInverted(InvertType.FollowMaster);
 
-  }
-    
-
-   /*try {
+    try {
       gyro = new AHRS(SPI.Port.kMXP); 
    } catch (RuntimeException ex ) {
        System.out.println("Error instantiating navX-MXP:  " + ex.getMessage());
    } 
-  } */
+  }
+    
+
+   
+   
 
   public double PositionRight() {
     return rightFrontMotor.getSelectedSensorPosition(0) * 5.68/ 2048;

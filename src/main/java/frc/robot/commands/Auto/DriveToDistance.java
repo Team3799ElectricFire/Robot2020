@@ -5,33 +5,29 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package frc.robot.commands;
+package frc.robot.commands.Auto;
 
-import static org.junit.Assert.assertNotEquals;
-
-import com.sun.source.tree.WhileLoopTree;
-
-import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-public class AutoDriveFar extends Command {
-  public AutoDriveFar() {
+public class DriveToDistance extends Command {
+  double m_distance;
+  public DriveToDistance(double distance) {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
     requires(Robot.m_drivetrain);
+    m_distance = distance;
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-   //while()
-  
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
+    Robot.m_drivetrain.TankDrive(1, 1);  //TODO slow down near the end, then this needs gyroscope
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -43,11 +39,13 @@ public class AutoDriveFar extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
+    Robot.m_drivetrain.TankDrive(0.0, 0.0);
   }
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run
   @Override
   protected void interrupted() {
+    end();
   }
 }
